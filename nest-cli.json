@@ -1,0 +1,138 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api/src",
+  "monorepo": true,
+  "root": "apps/api",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.app.json"
+  },
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json",
+        "plugins": [
+          {
+            "name": "@nestjs/swagger/plugin",
+            "options": {
+              "classValidatorShim": true,
+              "introspectComments": true
+            }
+          }
+        ]
+      }
+    },
+    "producer": {
+      "type": "application",
+      "root": "apps/queue",
+      "entryFile": "main",
+      "sourceRoot": "apps/queue/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/queue/tsconfig.app.json"
+      }
+    },
+    "message-queue": {
+      "type": "library",
+      "root": "libs/message-queue",
+      "entryFile": "index",
+      "sourceRoot": "libs/message-queue/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/message-queue/tsconfig.lib.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
+      }
+    },
+    "logger": {
+      "type": "library",
+      "root": "libs/logger",
+      "entryFile": "index",
+      "sourceRoot": "libs/logger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/logger/tsconfig.lib.json"
+      }
+    },
+    "browser": {
+      "type": "library",
+      "root": "libs/browser",
+      "entryFile": "index",
+      "sourceRoot": "libs/browser/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/browser/tsconfig.lib.json"
+      }
+    },
+    "core-scanner": {
+      "type": "library",
+      "root": "libs/core-scanner",
+      "entryFile": "index",
+      "sourceRoot": "libs/core-scanner/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core-scanner/tsconfig.lib.json"
+      }
+    },
+    "scan-engine": {
+      "type": "application",
+      "root": "apps/scan-engine",
+      "entryFile": "main",
+      "sourceRoot": "apps/scan-engine/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/scan-engine/tsconfig.app.json"
+      }
+    },
+    "ingest": {
+      "type": "library",
+      "root": "libs/ingest",
+      "entryFile": "index",
+      "sourceRoot": "libs/ingest/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/ingest/tsconfig.lib.json"
+      }
+    },
+    "cli": {
+      "type": "application",
+      "root": "apps/cli",
+      "entryFile": "main",
+      "sourceRoot": "apps/cli/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cli/tsconfig.app.json"
+      }
+    },
+    "storage": {
+      "type": "library",
+      "root": "libs/storage",
+      "entryFile": "index",
+      "sourceRoot": "libs/storage/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/storage/tsconfig.lib.json"
+      }
+    },
+    "snapshot": {
+      "type": "library",
+      "root": "libs/snapshot",
+      "entryFile": "index",
+      "sourceRoot": "libs/snapshot/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/snapshot/tsconfig.lib.json"
+      }
+    },
+    "datetime": {
+      "type": "library",
+      "root": "libs/datetime",
+      "entryFile": "index",
+      "sourceRoot": "libs/datetime/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/datetime/tsconfig.lib.json"
+      }
+    }
+  }
+}

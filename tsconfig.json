@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["ES2020.String", "es5", "es6", "dom", "dom.iterable"],
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "paths": {
+      "@app/browser": ["libs/browser/src"],
+      "@app/browser/*": ["libs/browser/src/*"],
+      "@app/core-scanner": ["libs/core-scanner/src"],
+      "@app/core-scanner/*": ["libs/core-scanner/src/*"],
+      "@app/database": ["libs/database/src"],
+      "@app/database/*": ["libs/database/src/*"],
+      "@app/datetime": ["libs/datetime/src"],
+      "@app/datetime/*": ["libs/datetime/src/*"],
+      "@app/ingest": ["libs/ingest/src"],
+      "@app/ingest/*": ["libs/ingest/src/*"],
+      "@app/message-queue": ["libs/message-queue/src"],
+      "@app/message-queue/*": ["libs/message-queue/src/*"],
+      "@app/queue": ["libs/queue/src"],
+      "@app/queue/*": ["libs/queue/src/*"],
+      "@app/snapshot": ["libs/snapshot/src"],
+      "@app/snapshot/*": ["libs/snapshot/src/*"],
+      "@app/storage": ["libs/storage/src"],
+      "@app/storage/*": ["libs/storage/src/*"]
+    }
+  }
+}
